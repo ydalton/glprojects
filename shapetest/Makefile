@@ -1,4 +1,5 @@
 include ../include/include.mk
 
 gravity: 
-	$(CC) $(CFLAGS) test.c ../drawshape/drawshape.c -o test
+	mkdir -p $(OUTDIR)
+	$(CC) $(CFLAGS) -I$(INCLUDE) test.c $(LIB) -o $(OUTDIR)test
