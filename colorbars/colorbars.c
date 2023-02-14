@@ -30,10 +30,10 @@ void display() {
     glBegin(GL_QUADS);
     for(bar = 0; bar < BAR_NUM; bar++) {
         glColor3f(colors[bar][0], colors[bar][1], colors[bar][2]);
-        glVertex2i(bar * (640/BAR_NUM), 0);
-        glVertex2i((bar+1) * (640/BAR_NUM), 0);
-        glVertex2i((bar+1) * (640/BAR_NUM), W_HEIGHT);
-        glVertex2i(bar * (640/BAR_NUM), W_HEIGHT);
+        glVertex2i(bar * (W_WIDTH/BAR_NUM), 0);
+        glVertex2i((bar+1) * (W_WIDTH/BAR_NUM), 0);
+        glVertex2i((bar+1) * (W_WIDTH/BAR_NUM), W_HEIGHT);
+        glVertex2i(bar * (W_WIDTH/BAR_NUM), W_HEIGHT);
     }
     glEnd();
     glutSwapBuffers();
